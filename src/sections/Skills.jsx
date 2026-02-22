@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion';
 import { SiUnrealengine, SiAdobeaftereffects, SiAdobepremierepro, SiAdobephotoshop } from 'react-icons/si';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Bot, BrainCircuit } from 'lucide-react';
 
 const skills = [
-    { name: 'Unreal Engine 5', level: 95, icon: <SiUnrealengine size={24} /> },
-    { name: 'Unreal Engine 4', level: 90, icon: <SiUnrealengine size={24} /> },
-    { name: 'Niagara VFX', level: 95, icon: <Sparkles size={24} /> },
-    { name: 'After Effects', level: 85, icon: <SiAdobeaftereffects size={24} /> },
-    { name: 'Premiere Pro', level: 80, icon: <SiAdobepremierepro size={24} /> },
-    { name: 'Photoshop', level: 75, icon: <SiAdobephotoshop size={24} /> },
+    { name: 'Unreal Engine 4 & 5 Sequence', level: 90, icon: <SiUnrealengine size={24} /> },
+    { name: 'After Effects', level: 90, icon: <SiAdobeaftereffects size={24} /> },
+    { name: 'Photoshop', level: 80, icon: <SiAdobephotoshop size={24} /> },
+    { name: 'Premiere Pro', level: 70, icon: <SiAdobepremierepro size={24} /> },
+    { name: 'Niagara VFX', level: 60, icon: <Sparkles size={24} /> },
+    { name: 'AI를 활용한 스토리보드 제작', level: 90, icon: <Bot size={24} /> },
+    { name: 'Antigravity + NotebookLM', level: 90, icon: <BrainCircuit size={24} /> },
 ];
 
 const Skills = () => {

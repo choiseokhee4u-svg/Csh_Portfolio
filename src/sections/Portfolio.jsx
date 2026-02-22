@@ -3,39 +3,39 @@ import { motion } from 'framer-motion';
 const videos = [
     {
         id: '1',
-        title: 'Cinematic Reel 2026',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1',
-        category: 'Unreal Engine 5 Core'
+        title: '[Project Q] G-Star 2024 Special Trailer',
+        url: 'https://www.youtube.com/embed/rewe8ZRbxEs',
+        category: 'Cinematic Trailer'
     },
     {
         id: '2',
-        title: 'Cyberpunk Cityscape',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1',
-        category: 'Lighting & Environment'
+        title: '[Project S] G-Star 2024 Special Trailer',
+        url: 'https://www.youtube.com/embed/QH4Phb2wOvI',
+        category: 'Cinematic Trailer'
     },
     {
         id: '3',
-        title: 'Fantasy Forest Sequence',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1',
-        category: 'Level Design & Cinematography'
+        title: '[Teaser] Mirage, a new world of NFT gaming',
+        url: 'https://www.youtube.com/embed/zjsVCBasYxY',
+        category: 'Teaser Trailer'
     },
     {
         id: '4',
-        title: 'Sci-Fi Corridor',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1',
-        category: 'Hard Surface & Materials'
+        title: '[미르4] 게임 특징 열세번째: 비천약탈전',
+        url: 'https://www.youtube.com/embed/DM0Qfg3qlDo',
+        category: 'In-game Cinematic'
     },
     {
         id: '5',
-        title: 'Character Animation Test',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1',
-        category: 'Sequencer & Rigging'
+        title: '[MIR4] Class Combat/Introduction Video',
+        url: 'https://www.youtube.com/embed/V9zs9wA4RZw',
+        category: 'Combat & Action Sequence'
     },
     {
         id: '6',
-        title: 'Abstract VFX Breakdown',
-        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1',
-        category: 'Niagara Systems'
+        title: '[미르4] 신규 직업 석궁사 스킬 미리보기',
+        url: 'https://www.youtube.com/embed/p6E02XV1F38',
+        category: 'Skill Presentation'
     }
 ];
 
