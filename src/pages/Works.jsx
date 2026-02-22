@@ -1,7 +1,9 @@
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
-const videos = [
+const allVideos = [
     {
         id: '1',
         title: '[Project Q] G-Star 2024 Special Trailer',
@@ -40,41 +42,52 @@ const videos = [
     }
 ];
 
-const Portfolio = () => {
+const Works = () => {
+    // Scroll to top on load
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <section className="min-h-screen py-32 px-6 md:px-20 relative bg-[#0a0a0a]">
-            {/* Soft top gradient to blend with Hero fog */}
-            <div className="absolute top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-background to-transparent z-0 pointer-events-none" />
+        <div className="min-h-screen bg-background pt-32 pb-20 px-6 md:px-20 relative">
+            {/* Top Gradient */}
+            <div className="absolute top-0 left-0 w-full h-[30vh] bg-gradient-to-b from-black/80 to-transparent z-0 pointer-events-none" />
+
+            {/* Back Navigation */}
+            <nav className="fixed top-0 left-0 w-full p-6 pt-10 flex items-center z-50 mix-blend-difference pointer-events-none">
+                <Link to="/" className="interactive pointer-events-auto cursor-none group flex items-center gap-2 text-white/70 hover:text-accent transition-colors duration-300 uppercase tracking-widest text-sm font-semibold">
+                    <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                    Back to Main
+                </Link>
+            </nav>
 
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="max-w-7xl mx-auto relative z-10"
             >
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
                     <div>
-                        <h2 className="font-cinematic text-5xl md:text-7xl font-bold text-white mb-4">
-                            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary-accent">Work</span>
-                        </h2>
-                        <p className="text-white/50 text-lg uppercase tracking-widest">Selected Sequences</p>
+                        <h1 className="font-cinematic text-5xl md:text-7xl font-bold text-white mb-4">
+                            All <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary-accent">Portfolios</span>
+                        </h1>
+                        <p className="text-white/50 text-lg uppercase tracking-widest">Complete Archive</p>
                     </div>
                     <div className="h-[1px] flex-1 bg-white/10 ml-0 md:ml-10 mb-4 hidden md:block"></div>
                 </div>
 
                 {/* Grid Layout for Portfolio Items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {videos.slice(0, 3).map((video, index) => (
+                    {allVideos.map((video, index) => (
                         <motion.div
                             key={video.id}
                             initial={{ opacity: 0, scale: 0.95, y: 30 }}
-                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="group relative flex flex-col gap-5 interactive"
                         >
-                            {/* Video Container (Aspect Ratio 16:9) */}
+                            {/* Video Container */}
                             <div className="relative w-full pt-[56.25%] bg-black rounded-lg overflow-hidden border border-white/5 shadow-xl transition-all duration-500 group-hover:border-accent/40 group-hover:shadow-[0_0_20px_rgba(217,119,6,0.2)]">
                                 <iframe
                                     src={video.url}
@@ -99,22 +112,9 @@ const Portfolio = () => {
                         </motion.div>
                     ))}
                 </div>
-
-                {/* View More Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mt-20 text-center"
-                >
-                    <Link to="/works" className="inline-block interactive cursor-none px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/50 rounded-full font-cinematic uppercase tracking-widest text-white hover:text-accent transition-all duration-300">
-                        View All Projects
-                    </Link>
-                </motion.div>
             </motion.div>
-        </section>
+        </div>
     );
 };
 
-export default Portfolio;
+export default Works;

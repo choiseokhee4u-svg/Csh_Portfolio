@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CustomCursor from './components/CustomCursor';
 import Home from './pages/Home';
 import Resume from './pages/Resume';
+import Works from './pages/Works';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/works" element={<Works />} />
         </Routes>
       </div>
     </BrowserRouter>

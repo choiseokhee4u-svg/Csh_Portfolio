@@ -18,13 +18,10 @@ const AboutContact = () => {
                     </h2>
                     <div className="space-y-6 text-white/50 text-lg md:text-xl font-light leading-relaxed">
                         <p>
-                            안녕하세요. 가상의 세계를 스크린 위에 가장 아름답고 극적으로 구현하는 시네마틱 아티스트 최석희입니다.
-                            언리얼 엔진 5를 활용하여 환경 아트, 라이팅, 그리고 카메라 연출 기법을 연구하며 관객에게
-                            몰입감 있는 시각적 경험을 제공하는 것을 목표로 하고 있습니다.
-                        </p>
-                        <p>
-                            I specialize in orchestrating light, shadow, and environment within Unreal Engine to tell compelling narratives.
-                            My passion lies in bridging the gap between technical execution and artistic vision in real-time filmmaking.
+                            AI와 시퀀서 자동화로 기술적 한계를 넘어, 오직 압도적인 시각적 서사와 미장센에만 집중합니다.
+                            UE5 기반의 액션 RPG 트레일러 제작에서 반복적인 단순 노동을 효율화하고,
+                            그 여유를 고도의 카메라 연출과 라이팅의 밀도를 높이는 데 투자합니다.
+                            기술적 정교함과 예술적 직관이 만나는 리얼타임 필름메이킹을 통해 관객에게 잊지 못할 시각적 경험을 제공하는 것을 목표로 하고 있습니다.
                         </p>
                     </div>
                 </motion.div>

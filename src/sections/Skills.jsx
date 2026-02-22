@@ -9,7 +9,7 @@ const skills = [
     { name: 'Premiere Pro', level: 70, icon: <SiAdobepremierepro size={24} /> },
     { name: 'Niagara VFX', level: 60, icon: <Sparkles size={24} /> },
     { name: 'AI를 활용한 스토리보드 제작', level: 90, icon: <Bot size={24} /> },
-    { name: 'Antigravity + NotebookLM', level: 90, icon: <BrainCircuit size={24} /> },
+    { name: 'Antigravity + NotebookLM', level: 50, icon: <BrainCircuit size={24} /> },
 ];
 
 const Skills = () => {

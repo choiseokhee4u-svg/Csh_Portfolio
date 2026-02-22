@@ -89,15 +89,14 @@ const Resume = () => {
                 {/* Experience (경력) */}
                 <motion.div variants={itemVariants} className="mb-24">
                     <div className="flex items-baseline justify-between border-b border-white/10 pb-4 mb-10">
-                        <h2 className="font-cinematic text-3xl text-white">Experience <span className="text-white/30 text-xl ml-2 font-sans tracking-normal">경력 (총 8년 1개월)</span></h2>
+                        <h2 className="font-cinematic text-3xl text-white">Experience <span className="text-white/30 text-xl ml-2 font-sans tracking-normal">경력</span></h2>
                     </div>
 
                     <div className="space-y-12">
                         {/* Ncsoft */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2025.09 - 재직중 (0년 6개월)</span>
-                                <span>Ncsoft / JSY 게임실</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">Ncsoft / JSY 게임실</span>
                                 <span>파트장</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full">
@@ -113,8 +112,7 @@ const Resume = () => {
                         {/* Lionheart */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2022.11 - 2025.08 (2년 10개월)</span>
-                                <span>라이온하트 스튜디오 / 프로젝트Q</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">라이온하트 스튜디오 / 프로젝트Q</span>
                                 <span>팀장</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full">
@@ -130,8 +128,7 @@ const Resume = () => {
                         {/* Madngine */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2022.03 - 2022.10 (0년 8개월)</span>
-                                <span>매드엔진 / 아트실 연출팀</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">매드엔진 / 아트실 연출팀</span>
                                 <span>사원</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full">
@@ -146,8 +143,7 @@ const Resume = () => {
                         {/* Wemade */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2020.08 - 2022.02 (1년 7개월)</span>
-                                <span>위메이드 / 미디미팀</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">위메이드 / 미디미팀</span>
                                 <span>대리</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full">
@@ -164,8 +160,7 @@ const Resume = () => {
                         {/* Andar */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2020.01 - 2020.07 (0년 7개월)</span>
-                                <span>안다르 / 미디어컨텐츠</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">안다르 / 미디어컨텐츠</span>
                                 <span>사원</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full text-white/70 mt-1">
@@ -176,8 +171,7 @@ const Resume = () => {
                         {/* Vision Holdings */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2019.02 - 2020.01 (1년 0개월)</span>
-                                <span>비전홀딩스코퍼레이션 / 2D</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">비전홀딩스코퍼레이션 / 2D</span>
                                 <span>사원</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full text-white/70 mt-1">
@@ -188,8 +182,7 @@ const Resume = () => {
                         {/* Joycity */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2018.10 - 2019.01 (0년 4개월)</span>
-                                <span>조이시티 / 3on3</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">조이시티 / 3on3</span>
                                 <span>프리랜서</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full text-white/70 mt-1">
@@ -200,8 +193,7 @@ const Resume = () => {
                         {/* MCM */}
                         <div className="flex flex-col md:flex-row gap-4 md:gap-10 group">
                             <div className="md:w-1/3 flex flex-col text-white/50">
-                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">2018.03 - 2018.09 (0년 7개월)</span>
-                                <span>MCM / CMO</span>
+                                <span className="font-semibold text-white/80 group-hover:text-accent transition-colors">MCM / CMO</span>
                                 <span>사원</span>
                             </div>
                             <div className="md:w-2/3 glass-panel p-6 rounded-lg w-full text-white/70 mt-1">
@@ -233,11 +225,11 @@ const Resume = () => {
                             <ul className="space-y-4 text-white/70">
                                 <li>
                                     <span className="block text-white">SNS마케팅전문가 1급</span>
-                                    <span className="text-sm">2020.06 | 한국원격교육진흥원</span>
+                                    <span className="text-sm">한국원격교육진흥원</span>
                                 </li>
                                 <li>
                                     <span className="block text-white">실기교사</span>
-                                    <span className="text-sm">2018.02 | 교육과학기술부</span>
+                                    <span className="text-sm">교육과학기술부</span>
                                 </li>
                             </ul>
                         </div>
