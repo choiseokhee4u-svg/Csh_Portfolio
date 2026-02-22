@@ -40,25 +40,25 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 0.2 }}
                     className="text-accent uppercase tracking-[0.3em] text-sm mb-6 font-semibold"
                 >
-                    Unreal Engine Cinematic Artist
+                    Unreal Engine
                 </motion.p>
 
                 <motion.h1
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="font-cinematic text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50 leading-none drop-shadow-2xl"
+                    className="font-cinematic text-5xl md:text-7xl lg:text-[8rem] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50 leading-none drop-shadow-2xl"
                 >
-                    SEOKHEE
+                    CINEMATIC
                     <br />
-                    CHOI
+                    ARTIST
                 </motion.h1>
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.5, delay: 1 }}
-                    className="mt-12 max-w-xl px-6"
+                    className="mt-12 max-w-xl px-6 mb-32"
                 >
                     <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed">
                         Crafting immersive digital worlds and narrative-driven sequences through the lens of Unreal Engine.
@@ -70,16 +70,19 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
-                    className="absolute bottom-12 flex flex-col items-center gap-2"
+                    className="absolute bottom-12 flex flex-col items-center gap-4 z-20"
                 >
-                    <span className="text-xs uppercase tracking-[0.2em] text-white/40">Scroll to Explore</span>
+                    <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-medium">Scroll to Explore</span>
                     <motion.div
                         animate={{ y: [0, 8, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        className="w-[1px] h-12 bg-gradient-to-b from-accent to-transparent"
+                        className="w-[1px] h-16 bg-gradient-to-b from-accent to-transparent"
                     />
                 </motion.div>
             </motion.div>
+
+            {/* Fog Effect at the bottom */}
+            <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-background via-background/80 to-transparent z-10 pointer-events-none mix-blend-normal" />
         </section>
     );
 };
