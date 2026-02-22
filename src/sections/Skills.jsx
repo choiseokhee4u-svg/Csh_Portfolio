@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
+import { SiUnrealengine, SiAdobeaftereffects, SiAdobepremierepro, SiAdobephotoshop } from 'react-icons/si';
+import { Sparkles } from 'lucide-react';
 
 const skills = [
-    { name: 'Unreal Engine 5', level: 95 },
-    { name: 'Blueprint Scripting', level: 90 },
-    { name: 'Cinematics & Sequencer', level: 95 },
-    { name: 'Lighting & Materials', level: 85 },
-    { name: 'Environment Art', level: 80 },
-    { name: 'VFX / Quixel', level: 75 },
+    { name: 'Unreal Engine 5', level: 95, icon: <SiUnrealengine size={24} /> },
+    { name: 'Unreal Engine 4', level: 90, icon: <SiUnrealengine size={24} /> },
+    { name: 'Niagara VFX', level: 95, icon: <Sparkles size={24} /> },
+    { name: 'After Effects', level: 85, icon: <SiAdobeaftereffects size={24} /> },
+    { name: 'Premiere Pro', level: 80, icon: <SiAdobepremierepro size={24} /> },
+    { name: 'Photoshop', level: 75, icon: <SiAdobephotoshop size={24} /> },
 ];
 
 const Skills = () => {
@@ -37,9 +39,14 @@ const Skills = () => {
                             className="group"
                         >
                             <div className="flex justify-between items-end mb-3">
-                                <span className="text-white/80 font-medium tracking-wide text-lg group-hover:text-accent transition-colors duration-300">
-                                    {skill.name}
-                                </span>
+                                <div className="flex items-center gap-4">
+                                    <span className="text-white/40 group-hover:text-accent transition-colors duration-300">
+                                        {skill.icon}
+                                    </span>
+                                    <span className="text-white/80 font-medium tracking-wide text-lg group-hover:text-accent transition-colors duration-300">
+                                        {skill.name}
+                                    </span>
+                                </div>
                                 <span className="text-accent font-cinematic font-bold text-xl">
                                     {skill.level}%
                                 </span>
