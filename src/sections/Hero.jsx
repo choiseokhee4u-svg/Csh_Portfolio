@@ -65,20 +65,21 @@ const Hero = () => {
                     </p>
                 </motion.div>
 
-                {/* Scroll Indicator */}
+            </motion.div>
+
+            {/* Scroll Indicator - Moved outside parallax div */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 2 }}
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20"
+            >
+                <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-medium whitespace-nowrap">Scroll to Explore</span>
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
-                    className="absolute bottom-12 flex flex-col items-center gap-4 z-20"
-                >
-                    <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-medium">Scroll to Explore</span>
-                    <motion.div
-                        animate={{ y: [0, 8, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        className="w-[1px] h-16 bg-gradient-to-b from-accent to-transparent"
-                    />
-                </motion.div>
+                    animate={{ y: [0, 8, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-[1px] h-16 bg-gradient-to-b from-accent to-transparent"
+                />
             </motion.div>
 
             {/* Fog Effect at the bottom */}
