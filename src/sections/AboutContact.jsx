@@ -60,7 +60,7 @@ const AboutContact = () => {
 
                         {/* ArtStation */}
                         <a
-                            href="https://www.artstation.com/choiseokhee"
+                            href="https://www.artstation.com/user-777868"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group interactive relative overflow-hidden glass-panel p-8 rounded-xl flex flex-col items-center justify-center gap-4 transition-all duration-500 hover:bg-white/[0.08] hover:-translate-y-2 hover:border-accent/50 hover:shadow-[0_10px_40px_rgba(217,119,6,0.08)]"

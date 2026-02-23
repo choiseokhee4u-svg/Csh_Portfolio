@@ -259,6 +259,86 @@ const allVideos = [
         url: 'https://www.youtube.com/embed/L_I4nMkZPNI',
         category: 'Commercial / CF'
     },
+
+    // === VFX & Technical Art (ArtStation) ===
+    {
+        id: '43',
+        title: 'Unreal engine5 Aura Effect',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/76f0e389-ee1e-455f-bc91-cf63cb8afc3e/embed.html?s=802f21d5c89c2bd398e019f2b7262abdf13f9005584772fba8104089d5e923ba',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '44',
+        title: 'Unreal Engine5 -Niagara Horse Summon _Study',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/3535395c-1559-46f8-a75f-7b668448be05/embed.html?s=3647a6360e7abc400f9e06a91cb320bc5a45f92d2b6a08fd35401a2d146c4e96',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '45',
+        title: 'Unreal engine 5 Niagara Drone Missile Explosion',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/3556f56a-83db-4135-965b-0e7df2d0d76c/embed.html?s=fc65c169ea4f423ef2d3c1b17b5dc4c459f5bf278832130fc047456fefb61cdd',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '46',
+        title: 'Unreal engine 5 VFX Study Stencil Buffer&Exp',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/efff0556-6917-4f12-8b0e-f6062b0a0d72/embed.html?s=c07173bccf414ee6b4c2c36e7272e4b5fb46b35ada42c66d629c70378035a192',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '47',
+        title: 'Unreal engine 5 niagara SkelMorph_exp Study',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/58f714eb-c3e8-44aa-a81d-c37c5e09d0dd/embed.html?s=8d7c0ae24cdac8d9496f676bd650fc2cbdbe8d96e0d35198ea0d3266cb68230d',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '48',
+        title: 'Unreal engine 5 Water Exp Niagara',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/e1d6681a-cf84-431c-a2b4-5a6b089100bd/embed.html?s=862af8bcdd68dec6cac94fc607a811f1affd7335a9c85f07adbcd7ea8e745215',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '49',
+        title: 'Unreal engine 5 niagara Death Vfx',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/e841b36b-7569-4ebc-a834-50fb43d351fa/embed.html?s=fe761ff5b46ed0026b6e7c759b23cccd5955ca063729bc7c4146c08e3e42dcdf',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '50',
+        title: 'Unreal engine 5 niagara Thunder Fx study',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/70296187-111d-4ae0-9805-d42a3817695a/embed.html?s=cb9568fb34cfae2de74c377a40bf633ddbf1042e8cec4685fb257e3368760781',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '51',
+        title: 'Ice Exp Fx Study',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/437d291b-cca0-47a6-98ff-135cddc74d3c/embed.html?s=00dfd4c72a355a8329e79eaf458579c56316613767f13ad79e168cd4b26d053c',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '52',
+        title: 'VFX_Study Ground_Exp',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/90cfb1de-17ca-4ae2-a67d-9e76cd25d6b8/embed.html?s=ae69c289ea30882a4bc51957e2c11129a8f1aabb748891c17320a2191a98b168',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '53',
+        title: 'Unreal engine 5 Niagara Swing Trail Study',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/f4331275-c5ac-45a8-bda4-5486ab695b63/embed.html?s=5892743021e52c022fd9726ceadd7af394d7f2797219c338da75d807755d1467',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '54',
+        title: 'Vfx_Study UE5 Niagara Sword Trail',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/873a6bd6-cf39-457d-8960-168ab8fa11e6/embed.html?s=562a1ec1bf231d98e5dd159aac7cda7977bed9f38d5b4d504263512455afdd4c',
+        category: 'VFX / Technical Art'
+    },
+    {
+        id: '55',
+        title: 'Vfx_Study UE5 Niagara Shiled',
+        url: 'https://www.artstation.com/api/v2/animation/video_clips/946bb4a0-1b49-4ddf-8ff0-1e90b9434757/embed.html?s=1e0d1c6e7a3438b3f688cb1e414e8d4534d64527ab333113f3ee0931ef31113d',
+        category: 'VFX / Technical Art'
+    }
 ];
 
 // ============================================
