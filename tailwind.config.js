@@ -10,6 +10,7 @@ export default {
         background: '#050505',
         foreground: '#f8fafc',
         accent: '#d97706', /* Cinematic Amber */
+        'secondary-accent': '#3b82f6', /* Ice Blue */
         primary: '#111111',
         secondary: '#1a1a1a',
       },
