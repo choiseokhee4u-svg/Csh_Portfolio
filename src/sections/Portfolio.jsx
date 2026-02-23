@@ -1,45 +1,11 @@
 import { motion } from 'framer-motion';
-
-const videos = [
-    {
-        id: '1',
-        title: '[Project Q] G-Star 2024 Special Trailer',
-        url: 'https://www.youtube.com/embed/rewe8ZRbxEs',
-        category: 'Cinematic Trailer'
-    },
-    {
-        id: '2',
-        title: '[Project S] G-Star 2024 Special Trailer',
-        url: 'https://www.youtube.com/embed/QH4Phb2wOvI',
-        category: 'Cinematic Trailer'
-    },
-    {
-        id: '3',
-        title: '[Teaser] Mirage, a new world of NFT gaming',
-        url: 'https://www.youtube.com/embed/zjsVCBasYxY',
-        category: 'Teaser Trailer'
-    },
-    {
-        id: '4',
-        title: '[미르4] 게임 특징 열세번째: 비천약탈전',
-        url: 'https://www.youtube.com/embed/DM0Qfg3qlDo',
-        category: 'In-game Cinematic'
-    },
-    {
-        id: '5',
-        title: '[MIR4] Class Combat/Introduction Video',
-        url: 'https://www.youtube.com/embed/V9zs9wA4RZw',
-        category: 'Combat & Action Sequence'
-    },
-    {
-        id: '6',
-        title: '[미르4] 신규 직업 석궁사 스킬 미리보기',
-        url: 'https://www.youtube.com/embed/p6E02XV1F38',
-        category: 'Skill Presentation'
-    }
-];
+import { Link } from 'react-router-dom';
+import allVideos from '../data/videos';
 
 const Portfolio = () => {
+    // Show first 6 featured videos on the main page
+    const featuredVideos = allVideos.slice(0, 6);
+
     return (
         <section className="min-h-screen py-32 px-6 md:px-20 relative bg-[#0a0a0a]">
             {/* Soft top gradient to blend with Hero fog */}
@@ -64,7 +30,7 @@ const Portfolio = () => {
 
                 {/* Grid Layout for Portfolio Items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {videos.map((video, index) => (
+                    {featuredVideos.map((video, index) => (
                         <motion.div
                             key={video.id}
                             initial={{ opacity: 0, scale: 0.95, y: 30 }}
@@ -98,6 +64,19 @@ const Portfolio = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* View All Projects Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="mt-20 text-center"
+                >
+                    <Link to="/works" className="inline-block interactive cursor-none px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/50 rounded-full font-cinematic uppercase tracking-widest text-white hover:text-accent transition-all duration-300">
+                        View All {allVideos.length} Projects
+                    </Link>
+                </motion.div>
             </motion.div>
         </section>
     );

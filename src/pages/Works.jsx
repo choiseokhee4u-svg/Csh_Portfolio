@@ -1,52 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import allVideos from '../data/videos';
 
-const allVideos = [
-    {
-        id: '1',
-        title: '[Project Q] G-Star 2024 Special Trailer',
-        url: 'https://www.youtube.com/embed/rewe8ZRbxEs',
-        category: 'Cinematic Trailer'
-    },
-    {
-        id: '2',
-        title: '[Project S] G-Star 2024 Special Trailer',
-        url: 'https://www.youtube.com/embed/QH4Phb2wOvI',
-        category: 'Cinematic Trailer'
-    },
-    {
-        id: '3',
-        title: '[Teaser] Mirage, a new world of NFT gaming',
-        url: 'https://www.youtube.com/embed/zjsVCBasYxY',
-        category: 'Teaser Trailer'
-    },
-    {
-        id: '4',
-        title: '[미르4] 게임 특징 열세번째: 비천약탈전',
-        url: 'https://www.youtube.com/embed/DM0Qfg3qlDo',
-        category: 'In-game Cinematic'
-    },
-    {
-        id: '5',
-        title: '[MIR4] Class Combat/Introduction Video',
-        url: 'https://www.youtube.com/embed/V9zs9wA4RZw',
-        category: 'Combat & Action Sequence'
-    },
-    {
-        id: '6',
-        title: '[미르4] 신규 직업 석궁사 스킬 미리보기',
-        url: 'https://www.youtube.com/embed/p6E02XV1F38',
-        category: 'Skill Presentation'
-    }
-];
+// Get unique categories
+const categories = ['All', ...new Set(allVideos.map(v => v.category))];
 
 const Works = () => {
+    const [activeCategory, setActiveCategory] = useState('All');
+
     // Scroll to top on load
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const filteredVideos = activeCategory === 'All'
+        ? allVideos
+        : allVideos.filter(v => v.category === activeCategory);
 
     return (
         <div className="min-h-screen bg-background pt-32 pb-20 px-6 md:px-20 relative">
@@ -67,24 +38,42 @@ const Works = () => {
                 transition={{ duration: 0.8 }}
                 className="max-w-7xl mx-auto relative z-10"
             >
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
                         <h1 className="font-cinematic text-5xl md:text-7xl font-bold text-white mb-4">
                             All <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary-accent">Portfolios</span>
                         </h1>
-                        <p className="text-white/50 text-lg uppercase tracking-widest">Complete Archive</p>
+                        <p className="text-white/50 text-lg uppercase tracking-widest">
+                            Complete Archive — {filteredVideos.length} Projects
+                        </p>
                     </div>
                     <div className="h-[1px] flex-1 bg-white/10 ml-0 md:ml-10 mb-4 hidden md:block"></div>
                 </div>
 
+                {/* Category Filter */}
+                <div className="flex flex-wrap gap-3 mb-16">
+                    {categories.map(cat => (
+                        <button
+                            key={cat}
+                            onClick={() => setActiveCategory(cat)}
+                            className={`interactive cursor-none px-5 py-2 rounded-full text-xs uppercase tracking-widest font-semibold border transition-all duration-300 ${activeCategory === cat
+                                    ? 'bg-accent/20 border-accent/60 text-accent'
+                                    : 'bg-white/5 border-white/10 text-white/50 hover:border-white/30 hover:text-white/80'
+                                }`}
+                        >
+                            {cat}
+                        </button>
+                    ))}
+                </div>
+
                 {/* Grid Layout for Portfolio Items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {allVideos.map((video, index) => (
+                    {filteredVideos.map((video, index) => (
                         <motion.div
                             key={video.id}
                             initial={{ opacity: 0, scale: 0.95, y: 30 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.5) }}
                             className="group relative flex flex-col gap-5 interactive"
                         >
                             {/* Video Container */}
@@ -95,6 +84,7 @@ const Works = () => {
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
                                     className="absolute top-0 left-0 w-full h-full object-cover"
+                                    loading="lazy"
                                 />
                             </div>
 
