@@ -8,9 +8,10 @@ const skills = [
     { name: 'AI-Driven Storyboard Production', level: 90, icon: <Bot size={24} /> },
     { name: 'Photoshop', level: 80, icon: <SiAdobephotoshop size={24} /> },
     { name: 'Premiere Pro', level: 80, icon: <SiAdobepremierepro size={24} /> },
+    { name: 'AI-Driven Video Production Technology', level: 80, icon: <BrainCircuit size={24} /> },
+    { name: 'Motion Capture Directing & Performance', level: 80, icon: <Video size={24} /> },
     { name: 'Facial LiveLink Capture & Sequence Key Editing', level: 70, icon: <ScanFace size={24} /> },
     { name: 'Antigravity + NotebookLM', level: 60, icon: <BrainCircuit size={24} /> },
-    { name: 'Motion Capture Directing & Performance', level: 60, icon: <Video size={24} /> },
     { name: 'Niagara VFX', level: 50, icon: <Sparkles size={24} /> },
 ];
 

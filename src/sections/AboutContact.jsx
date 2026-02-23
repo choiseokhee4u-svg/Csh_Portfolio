@@ -74,7 +74,7 @@ const AboutContact = () => {
 
                         {/* LinkedIn */}
                         <a
-                            href="https://www.linkedin.com/in/choiseokhee"
+                            href="https://www.linkedin.com/in/sukhee-choi-711165280/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group interactive relative overflow-hidden glass-panel p-8 rounded-xl flex flex-col items-center justify-center gap-4 transition-all duration-500 hover:bg-white/[0.08] hover:-translate-y-2 hover:border-secondary-accent/50 hover:shadow-[0_10px_40px_rgba(59,130,246,0.08)]"
