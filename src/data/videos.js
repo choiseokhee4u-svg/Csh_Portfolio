@@ -2,6 +2,12 @@
 const allVideos = [
     // === G-Star & Cinematic Trailers ===
     {
+        id: '41',
+        title: '[Knight Crows] Cinematic Trailer',
+        url: 'https://www.youtube.com/embed/QOncAUfbHDA',
+        category: 'Cinematic Trailer'
+    },
+    {
         id: '1',
         title: '[Project Q] G-Star 2024 Special Trailer 4K',
         url: 'https://www.youtube.com/embed/rewe8ZRbxEs',
@@ -247,6 +253,27 @@ const allVideos = [
         url: 'https://www.youtube.com/embed/aE8tkxjueoE',
         category: 'Editing / VFX'
     },
+    {
+        id: '42',
+        title: '[셀리턴 New TVCF] 당신만을 위한 완성맞춤 - 이민호,강소라,박서준의 LED마스크',
+        url: 'https://www.youtube.com/embed/L_I4nMkZPNI',
+        category: 'Commercial / CF'
+    },
 ];
+
+// ============================================
+// 남은 Wix 직접 업로드 영상 (YouTube 업로드 필요) — 10개
+// ============================================
+// 1. 20220225_MIR_VV_PREVIEW (미르 VV 프리뷰)
+// 2. 20210308_비천공성전_광고소재_수정6 (비천공성전 광고소재)
+// 3. 현대 VR
+// 4. 0428_최석희_ITZY_브랜드메이킹_ALT_VER_v03 (ITZY 브랜드메이킹)
+// 5. 0429_itzy_테이핑_v04 (ITZY 테이핑)
+// 6. 20200427_ITZY구김종이_A_V05 (ITZY 구김종이)
+// 7. 0423_ITZY_그라데이션_편_자막 (ITZY 그라데이션)
+// 8. 강남필라테스_fix_0322.mp4 (강남필라테스)
+// 9. 제주도_맨즈_안다르 (제주도 맨즈 안다르)
+// 10. TRIVAGO_30s_ORIGINAL (트리바고 30초)
+// ============================================
 
 export default allVideos;
