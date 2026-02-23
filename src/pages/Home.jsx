@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Hero from '../sections/Hero';
 import Portfolio from '../sections/Portfolio';
 import Skills from '../sections/Skills';
@@ -26,7 +25,6 @@ function Home() {
                 <div className="flex gap-6 font-sans text-sm tracking-widest uppercase text-white/70">
                     <button onClick={() => scrollToSection('portfolio')} className="interactive pointer-events-auto cursor-none hover:text-white transition-colors duration-300">Work</button>
                     <button onClick={() => scrollToSection('skills')} className="interactive pointer-events-auto cursor-none hover:text-white transition-colors duration-300">Skills</button>
-                    <Link to="/resume" className="interactive pointer-events-auto cursor-none hover:text-accent transition-colors duration-300">Resume & Intro</Link>
                 </div>
             </nav>
 

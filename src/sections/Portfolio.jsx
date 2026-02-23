@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 const videos = [
     {
@@ -65,7 +64,7 @@ const Portfolio = () => {
 
                 {/* Grid Layout for Portfolio Items */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {videos.slice(0, 3).map((video, index) => (
+                    {videos.map((video, index) => (
                         <motion.div
                             key={video.id}
                             initial={{ opacity: 0, scale: 0.95, y: 30 }}
@@ -99,19 +98,6 @@ const Portfolio = () => {
                         </motion.div>
                     ))}
                 </div>
-
-                {/* View More Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mt-20 text-center"
-                >
-                    <Link to="/works" className="inline-block interactive cursor-none px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/50 rounded-full font-cinematic uppercase tracking-widest text-white hover:text-accent transition-all duration-300">
-                        View All Projects
-                    </Link>
-                </motion.div>
             </motion.div>
         </section>
     );

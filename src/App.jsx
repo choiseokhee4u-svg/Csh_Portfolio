@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CustomCursor from './components/CustomCursor';
 import Home from './pages/Home';
-import Resume from './pages/Resume';
 import Works from './pages/Works';
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
         <CustomCursor />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/works" element={<Works />} />
         </Routes>
       </div>
