@@ -43,15 +43,17 @@ function App() {
 
       <BrowserRouter>
         <div
-          className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white transition-opacity duration-1000 delay-500"
-          style={{ opacity: isLoading ? 0 : 1, pointerEvents: isLoading ? 'none' : 'auto' }}
+          className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white"
+          style={{ pointerEvents: isLoading ? 'none' : 'auto' }}
         >
           <BackgroundParticles />
           <CustomCursor />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/works" element={<Works />} />
-          </Routes>
+          {!isLoading && (
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/works" element={<Works />} />
+            </Routes>
+          )}
         </div>
       </BrowserRouter>
     </>
