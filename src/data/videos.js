@@ -242,12 +242,6 @@ const allVideos = [
         category: 'Commercial / CF'
     },
     {
-        id: '39',
-        title: "천연사이다 광고 '천사의 비밀' 편",
-        url: 'https://www.youtube.com/embed/Jf_GMY80J4w',
-        category: 'Commercial / CF'
-    },
-    {
         id: '42',
         title: '[셀리턴 New TVCF] 당신만을 위한 완성맞춤 - 이민호,강소라,박서준의 LED마스크',
         url: 'https://www.youtube.com/embed/L_I4nMkZPNI',
