@@ -9,37 +9,49 @@ import Works from './pages/Works';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+
+  // Triggered when Preloader finishes counting
+  const handlePreloaderComplete = () => {
+    setIsLoading(false);
+    // Give the letterbox animation time to finish (1.5s + small buffer)
+    setTimeout(() => {
+      setIsAnimationComplete(true);
+    }, 2000);
+  };
 
   return (
     <>
-      <Preloader onComplete={() => setIsLoading(false)} />
+      <Preloader onComplete={handlePreloaderComplete} />
 
       {/* Cinematic Letterbox Opening Animation */}
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            className="fixed inset-0 z-[9999] pointer-events-none flex flex-col"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.1, delay: 1.5 }}
-          >
-            {/* Top Bar */}
+      {!isAnimationComplete && (
+        <AnimatePresence>
+          {isLoading && (
             <motion.div
-              className="w-full h-1/2 bg-black"
-              initial={{ y: 0 }}
-              exit={{ y: "-100%" }}
-              transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
-            />
-            {/* Bottom Bar */}
-            <motion.div
-              className="w-full h-1/2 bg-black"
-              initial={{ y: 0 }}
-              exit={{ y: "100%" }}
-              transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+              className="fixed inset-0 z-[9999] pointer-events-none flex flex-col"
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1, delay: 1.5 }}
+            >
+              {/* Top Bar */}
+              <motion.div
+                className="w-full h-1/2 bg-black"
+                initial={{ y: 0 }}
+                exit={{ y: "-100%" }}
+                transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+              />
+              {/* Bottom Bar */}
+              <motion.div
+                className="w-full h-1/2 bg-black"
+                initial={{ y: 0 }}
+                exit={{ y: "100%" }}
+                transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
 
       <BrowserRouter>
         <div
