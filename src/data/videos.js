@@ -248,32 +248,73 @@ const allVideos = [
         category: 'Commercial / CF'
     },
     {
-        id: '40',
+        id: '42',
+        title: '[셀리턴 New TVCF] 당신만을 위한 완성맞춤 - 이민호,강소라,박서준의 LED마스크',
+        url: 'https://www.youtube.com/embed/L_I4nMkZPNI',
+        category: 'Commercial / CF'
+    },
+
+    // === YouTube Uploads (Formerly Wix Direct Uploads) ===
+    {
+        id: '56',
         title: '블랙 미러 | 통합 예고편 | Netflix',
         url: 'https://www.youtube.com/embed/aE8tkxjueoE',
         category: 'Editing / VFX'
     },
     {
-        id: '42',
-        title: '[셀리턴 New TVCF] 당신만을 위한 완성맞춤 - 이민호,강소라,박서준의 LED마스크',
-        url: 'https://www.youtube.com/embed/L_I4nMkZPNI',
+        id: '57',
+        title: 'ITZY_브랜드메이킹',
+        url: 'https://www.youtube.com/embed/HGHaczIRk7Q',
         category: 'Commercial / CF'
+    },
+    {
+        id: '58',
+        title: 'TRIVAGO_30s_ORIGINAL',
+        url: 'https://www.youtube.com/embed/GpsKT6pDI-A',
+        category: 'Commercial / CF'
+    },
+    {
+        id: '59',
+        title: 'Andar_강남 필라테스 촬영 및 편집본',
+        url: 'https://www.youtube.com/embed/6uqbP7Vk5Fk',
+        category: 'Commercial / CF'
+    },
+    {
+        id: '60',
+        title: '[셀리턴 New TVCF] 당신만을 위한 완성맞춤 - 이민호강소라박서준의 LED마스크',
+        url: 'https://www.youtube.com/embed/HzZDxIEQO7g',
+        category: 'Commercial / CF'
+    },
+    {
+        id: '61',
+        title: '1122_현대VR_Main_A',
+        url: 'https://www.youtube.com/embed/hSy-eRjoMKk',
+        category: 'Commercial / CF'
+    },
+    {
+        id: '62',
+        title: '제주도_맨즈_안다르',
+        url: 'https://www.youtube.com/embed/9aK0HuLtlME',
+        category: 'Commercial / CF'
+    },
+    {
+        id: '63',
+        title: 'Itzy_세로버전',
+        url: 'https://www.youtube.com/embed/_azgrQFBTMk',
+        category: 'Commercial / CF'
+    },
+    {
+        id: '64',
+        title: '20220225_MIR_VV_PREVIEW',
+        url: 'https://www.youtube.com/embed/0Vj4Dn9qv-E',
+        category: 'Game Promo'
+    },
+    {
+        id: '65',
+        title: '20210308_비천공성전_광고소재_수정6',
+        url: 'https://www.youtube.com/embed/U7guOp9sxaQ',
+        category: 'Game Promo'
     }
 ];
-
-// ============================================
-// 남은 Wix 직접 업로드 영상 (YouTube 업로드 필요) — 10개
-// ============================================
-// 1. 20220225_MIR_VV_PREVIEW (미르 VV 프리뷰)
-// 2. 20210308_비천공성전_광고소재_수정6 (비천공성전 광고소재)
-// 3. 현대 VR
-// 4. 0428_최석희_ITZY_브랜드메이킹_ALT_VER_v03 (ITZY 브랜드메이킹)
-// 5. 0429_itzy_테이핑_v04 (ITZY 테이핑)
-// 6. 20200427_ITZY구김종이_A_V05 (ITZY 구김종이)
-// 7. 0423_ITZY_그라데이션_편_자막 (ITZY 그라데이션)
-// 8. 강남필라테스_fix_0322.mp4 (강남필라테스)
-// 9. 제주도_맨즈_안다르 (제주도 맨즈 안다르)
-// 10. TRIVAGO_30s_ORIGINAL (트리바고 30초)
-// ============================================
 
 export default allVideos;
