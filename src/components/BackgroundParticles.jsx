@@ -4,6 +4,8 @@ const BackgroundParticles = () => {
     const canvasRef = useRef(null);
     const animationRef = useRef(null);
     const particlesRef = useRef([]);
+    const sparksRef = useRef([]);
+    const mouseRef = useRef({ x: -100, y: -100, isMoving: false });
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -17,7 +19,34 @@ const BackgroundParticles = () => {
         resize();
         window.addEventListener('resize', resize);
 
-        // Initialize particles
+        const handleMouseMove = (e) => {
+            mouseRef.current.x = e.clientX;
+            mouseRef.current.y = e.clientY;
+            mouseRef.current.isMoving = true;
+
+            // Spawn sparks on mouse move
+            for (let i = 0; i < 2; i++) {
+                sparksRef.current.push({
+                    x: e.clientX,
+                    y: e.clientY,
+                    size: Math.random() * 2 + 0.5,
+                    speedX: (Math.random() - 0.5) * 4,
+                    speedY: (Math.random() - 0.5) * 4,
+                    gravity: 0.15,
+                    life: 1.0,
+                    decay: Math.random() * 0.02 + 0.015,
+                    hue: Math.random() > 0.5 ? 35 : 15, // Orange/Red sparks
+                });
+            }
+
+            clearTimeout(mouseRef.current.timer);
+            mouseRef.current.timer = setTimeout(() => {
+                mouseRef.current.isMoving = false;
+            }, 100);
+        };
+        window.addEventListener('mousemove', handleMouseMove);
+
+        // Initialize background ambient particles
         const count = 40;
         particlesRef.current = [];
         for (let i = 0; i < count; i++) {
@@ -78,6 +107,31 @@ const BackgroundParticles = () => {
                 ctx.fill();
             }
 
+            // Niagara Cursor Sparks
+            for (let i = sparksRef.current.length - 1; i >= 0; i--) {
+                const s = sparksRef.current[i];
+                s.x += s.speedX;
+                s.y += s.speedY;
+                s.speedY += s.gravity; // Apply gravity
+                s.life -= s.decay;
+
+                if (s.life <= 0) {
+                    sparksRef.current.splice(i, 1);
+                    continue;
+                }
+
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsl(${s.hue}, 100%, 60%, ${s.life})`;
+                ctx.fill();
+
+                // Spark glow
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.size * 4, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${s.hue}, 100%, 50%, ${s.life * 0.3})`;
+                ctx.fill();
+            }
+
             animationRef.current = requestAnimationFrame(animate);
         };
 
@@ -85,6 +139,7 @@ const BackgroundParticles = () => {
 
         return () => {
             window.removeEventListener('resize', resize);
+            window.removeEventListener('mousemove', handleMouseMove);
             if (animationRef.current) cancelAnimationFrame(animationRef.current);
         };
     }, []);
