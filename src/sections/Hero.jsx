@@ -12,7 +12,6 @@ const Hero = () => {
 
     const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
     const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-    const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     return (
         <section
@@ -25,7 +24,7 @@ const Hero = () => {
 
             {/* Ambient glowing background */}
             <motion.div
-                style={{ y: y1, opacity }}
+                style={{ y: y1 }}
                 className="absolute inset-0 z-0 pointer-events-none"
             >
                 {/* Main amber glow */}
@@ -64,7 +63,7 @@ const Hero = () => {
 
             {/* Main Content */}
             <motion.div
-                style={{ y: y2, opacity }}
+                style={{ y: y2 }}
                 className="z-10 text-center flex flex-col items-center mt-8"
             >
                 {/* Name - Identity */}
