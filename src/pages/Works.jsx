@@ -40,7 +40,7 @@ const Works = () => {
             >
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <h1 className="font-cinematic text-5xl md:text-7xl font-bold text-white mb-4">
+                        <h1 className="font-cinematic text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 mt-6 md:mt-0">
                             All <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary-accent">Portfolios</span>
                         </h1>
                         <p className="text-white/40 text-lg uppercase tracking-widest">

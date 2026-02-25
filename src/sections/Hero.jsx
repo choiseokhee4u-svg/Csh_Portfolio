@@ -59,8 +59,8 @@ const Hero = () => {
             </div>
 
             {/* Decorative cinematic lines */}
-            <div className="absolute top-0 left-10 w-[1px] h-screen bg-gradient-to-b from-transparent via-white/10 to-transparent" />
-            <div className="absolute top-0 right-10 w-[1px] h-screen bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+            <div className="absolute top-0 left-4 md:left-10 w-[1px] h-[100dvh] bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+            <div className="absolute top-0 right-4 md:right-10 w-[1px] h-[100dvh] bg-gradient-to-b from-transparent via-white/10 to-transparent" />
 
             {/* Main Content */}
             <motion.div
@@ -69,10 +69,10 @@ const Hero = () => {
             >
                 {/* Name - Identity */}
                 <motion.p
-                    initial={{ opacity: 0, letterSpacing: '0.1em' }}
-                    animate={{ opacity: 1, letterSpacing: '0.5em' }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.5, delay: 0.1 }}
-                    className="text-white/30 uppercase text-xs md:text-sm mb-8 font-light tracking-[0.5em]"
+                    className="text-white/30 uppercase text-[10px] md:text-sm mb-6 md:mb-8 font-light tracking-[0.3em] md:tracking-[0.5em]"
                 >
                     Seokhee Choi
                 </motion.p>
@@ -81,7 +81,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    className="text-accent uppercase tracking-[0.3em] text-sm mb-6 font-semibold text-glow"
+                    className="text-accent uppercase tracking-[0.2em] md:tracking-[0.3em] text-[10px] md:text-sm mb-4 md:mb-6 font-semibold text-glow"
                 >
                     Unreal Engine
                 </motion.p>
@@ -90,7 +90,7 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.6 }}
-                    className="font-cinematic text-5xl md:text-7xl lg:text-[8rem] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 leading-none"
+                    className="font-cinematic text-4xl sm:text-5xl md:text-7xl lg:text-[8rem] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 leading-none"
                 >
                     CINEMATIC
                     <br />

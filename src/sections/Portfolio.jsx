@@ -20,7 +20,7 @@ const Portfolio = () => {
             >
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
                     <div>
-                        <h2 className="font-cinematic text-5xl md:text-7xl font-bold text-white mb-4">
+                        <h2 className="font-cinematic text-4xl md:text-7xl font-bold text-white mb-4">
                             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary-accent">Work</span>
                         </h2>
                         <p className="text-white/40 text-lg uppercase tracking-widest">Selected Sequences</p>
@@ -83,7 +83,7 @@ const Portfolio = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-center"
                 >
-                    <Link to="/works" className="inline-block interactive cursor-none px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/50 rounded-full font-cinematic uppercase tracking-widest text-white/70 hover:text-accent transition-all duration-300 text-sm">
+                    <Link to="/works" className="inline-block interactive cursor-none px-6 md:px-10 py-4 md:py-5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/50 rounded-full font-cinematic uppercase tracking-widest text-white/70 hover:text-accent transition-all duration-300 text-xs md:text-sm">
                         View All {allVideos.length} Projects
                     </Link>
                 </motion.div>

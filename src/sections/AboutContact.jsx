@@ -14,7 +14,7 @@ const AboutContact = () => {
                     transition={{ duration: 0.8 }}
                     className="relative"
                 >
-                    <h2 className="font-cinematic text-4xl md:text-5xl font-bold text-white mb-12">
+                    <h2 className="font-cinematic text-4xl md:text-5xl font-bold text-white mb-8 md:mb-12 mt-8 md:mt-0">
                         The Director's Cut
                     </h2>
 
@@ -23,7 +23,7 @@ const AboutContact = () => {
                         {/* Large decorative quote mark */}
                         <div className="absolute -top-6 -left-4 text-accent/10 text-8xl font-cinematic select-none pointer-events-none leading-none">"</div>
 
-                        <div className="space-y-6 text-white/45 text-lg md:text-xl font-light leading-relaxed">
+                        <div className="space-y-6 text-white/45 text-base md:text-xl font-light leading-relaxed">
                             <p>
                                 AI와 시퀀서 자동화로 기술적 한계를 넘어, 오직 압도적인 시각적 서사와 미장센에만 집중합니다.
                                 UE5 기반의 액션 RPG 트레일러 제작에서 반복적인 단순 노동을 효율화하고,
@@ -52,7 +52,7 @@ const AboutContact = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.2 }}
                 >
-                    <h2 className="font-cinematic text-3xl font-bold text-white/20 mb-10 pb-4 border-b border-white/5 uppercase tracking-widest text-center">
+                    <h2 className="font-cinematic text-2xl md:text-3xl font-bold text-white/20 mb-8 md:mb-10 pb-4 border-b border-white/5 uppercase tracking-widest text-center">
                         Connect
                     </h2>
 

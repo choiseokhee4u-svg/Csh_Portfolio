@@ -115,7 +115,7 @@ const Skills = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="font-cinematic text-5xl md:text-7xl font-bold text-white mb-4"
+                        className="font-cinematic text-4xl md:text-7xl font-bold text-white mb-4 mt-8 md:mt-0"
                     >
                         Blueprint <span className="text-white/20">Tree</span>
                     </motion.h2>

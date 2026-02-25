@@ -22,7 +22,7 @@ function Home() {
                 >
                     CSH<span className="text-accent">.</span>
                 </h1>
-                <div className="flex gap-6 font-sans text-sm tracking-widest uppercase text-white/70">
+                <div className="flex gap-4 md:gap-6 font-sans text-xs md:text-sm tracking-widest uppercase text-white/70">
                     <button onClick={() => scrollToSection('portfolio')} className="interactive pointer-events-auto cursor-none hover:text-white transition-colors duration-300">Work</button>
                     <button onClick={() => scrollToSection('skills')} className="interactive pointer-events-auto cursor-none hover:text-white transition-colors duration-300">Skills</button>
                 </div>

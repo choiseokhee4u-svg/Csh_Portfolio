@@ -55,7 +55,7 @@ function App() {
 
       <BrowserRouter>
         <div
-          className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white"
+          className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-white overflow-x-hidden"
           style={{ pointerEvents: isLoading ? 'none' : 'auto' }}
         >
           <BackgroundParticles />
