@@ -25,7 +25,7 @@ const Works = () => {
             <div className="absolute top-0 left-0 w-full h-[30vh] bg-gradient-to-b from-black/80 to-transparent z-0 pointer-events-none" />
 
             {/* Back Navigation */}
-            <nav className="fixed top-0 left-0 w-full p-6 pt-10 flex items-center z-50 mix-blend-difference pointer-events-none">
+            <nav className="fixed top-0 left-0 w-full p-6 pt-10 flex items-center z-50 pointer-events-none drop-shadow-lg">
                 <Link to="/" className="interactive pointer-events-auto cursor-none group flex items-center gap-2 text-white/50 hover:text-accent transition-colors duration-300 uppercase tracking-widest text-xs font-semibold">
                     <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
                     Back to Main

@@ -29,6 +29,7 @@ function App() {
         <AnimatePresence>
           {isLoading && (
             <motion.div
+              key="letterbox-wrapper"
               className="fixed inset-0 z-[9999] pointer-events-none flex flex-col"
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}

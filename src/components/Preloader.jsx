@@ -37,6 +37,7 @@ const Preloader = ({ onComplete }) => {
         <AnimatePresence>
             {!isFinished && (
                 <motion.div
+                    key="preloader"
                     className="fixed inset-0 z-[10000] flex flex-col items-center justify-end pb-24 bg-black pointer-events-none"
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

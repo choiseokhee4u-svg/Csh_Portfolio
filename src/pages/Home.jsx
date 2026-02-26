@@ -15,7 +15,7 @@ function Home() {
     return (
         <div className="flex flex-col relative w-full">
             {/* Navigation */}
-            <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference pointer-events-none">
+            <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 pointer-events-none drop-shadow-lg">
                 <h1
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="font-cinematic text-xl font-bold tracking-widest uppercase text-white pointer-events-auto cursor-none hover:text-accent transition-colors duration-300"

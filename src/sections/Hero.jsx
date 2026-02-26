@@ -10,8 +10,10 @@ const Hero = () => {
         offset: ["start start", "end start"]
     });
 
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    // Disable parallax on mobile to prevent useScroll NaN bugs
+    const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 200]);
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : -100]);
 
     return (
         <section
