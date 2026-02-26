@@ -62,10 +62,12 @@ function App() {
           <BackgroundParticles />
           <CustomCursor />
           {!isLoading && (
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/works" element={<Works />} />
-            </Routes>
+            <div className="relative z-10 flex flex-col w-full min-h-screen">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/works" element={<Works />} />
+              </Routes>
+            </div>
           )}
         </div>
       </BrowserRouter>

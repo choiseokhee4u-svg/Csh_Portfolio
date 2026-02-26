@@ -18,7 +18,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="relative h-[100dvh] min-h-[600px] flex flex-col items-center justify-center overflow-x-clip"
+            className="relative h-[100vh] min-h-[600px] flex flex-col items-center justify-center overflow-x-clip"
         >
             {/* Cinematic Letterbox Bars */}
             <div className="absolute top-0 left-0 w-full h-[8vh] bg-black z-30 pointer-events-none" />
