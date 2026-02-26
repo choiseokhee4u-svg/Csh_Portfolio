@@ -10,15 +10,14 @@ const Hero = () => {
         offset: ["start start", "end start"]
     });
 
-    // Disable parallax on mobile to prevent useScroll NaN bugs
     const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 200]);
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : -100]);
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
         <section
             ref={containerRef}
-            className="relative h-[100vh] min-h-[600px] flex flex-col items-center justify-center overflow-x-clip"
+            className="relative h-[100vh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden"
         >
             {/* Cinematic Letterbox Bars */}
             <div className="absolute top-0 left-0 w-full h-[8vh] bg-black z-30 pointer-events-none" />
@@ -26,7 +25,7 @@ const Hero = () => {
 
             {/* Ambient glowing background */}
             <motion.div
-                style={{ y: y1 }}
+                style={isMobile ? {} : { y: y1 }}
                 className="absolute inset-0 z-0 pointer-events-none"
             >
                 {/* Main amber glow */}
@@ -65,7 +64,7 @@ const Hero = () => {
 
             {/* Main Content */}
             <motion.div
-                style={{ y: y2 }}
+                style={isMobile ? {} : { y: y2 }}
                 className="z-10 text-center flex flex-col items-center mt-8"
             >
                 {/* Name - Identity */}
